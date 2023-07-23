@@ -7,21 +7,10 @@ import Image from "next/image";
 import { Facebook, Twitter, Linkedin, Mail } from "lucide-react";
 
 import Container from '@/components/ui/container';
-import useCart from '@/hooks/use-cart';
 
 export const revalidate = 0;
 
 const AboutPage = () => {
-  const [isMounted, setIsMounted] = useState(false);
-  const cart = useCart();
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  if (!isMounted) {
-    return null;
-  }
 
   return (
     <div className="bg-white">

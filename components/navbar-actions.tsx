@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 
 import Button from "@/components/ui/button";
 import useCart from "@/hooks/use-cart";
-import useAbout from "@/hooks/use-cart";
 
 const NavbarActions = () => {
   const [isMounted, setIsMounted] = useState(false);
@@ -17,7 +16,6 @@ const NavbarActions = () => {
 
   const router = useRouter();
   const cart = useCart();
-  useAbout();
 
   if (!isMounted) {
     return null;
